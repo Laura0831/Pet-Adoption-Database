@@ -1,0 +1,32 @@
+<html>
+
+    <head>
+	<title>Main Page</title>
+   	<script>
+		
+	
+		function AdopterList()
+		{
+			window.location.pathname= '/petadopt/adopter.jsp';
+		}
+		function PetsList()
+		{
+			window.location.pathname= '/petadopt/pet.jsp';
+		}
+		function Profile()
+		{
+			window.location.pathname= '/petadopt/profile.jsp';
+		}
+	</script>
+    </head>
+
+    <body>
+   	<center>
+             <h1>Welcome User</h1> <br>
+	     <button onclick="AdopterList()" style="width:100px; font-size: 15px;">Adopters</button>
+	     <button onclick="PetsList()" style="width:100px; font-size: 15px; margin-left:20px;">Pets</button>
+	     <button onclick="Profile()" style="width:100px; font-size: 15px; margin-left:20px;">Profile</button>
+	     
+	</center>
+    </body>
+</html>

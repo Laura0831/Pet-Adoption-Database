@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+	<title>PetAdopt</title>
+   	<script>
+
+		function start()
+		{
+			if(window.location.search.includes("error"))
+			{
+				document.getElementById("error").style.visibility="visible";
+			}
+			else
+			{
+				document.getElementById("error").style.visibility="hidden";
+			}
+		}
+		function register()
+		{
+			window.location.pathname= '/petadopt/register.html';
+		}
+	</script>
+    </head>
+
+    <body>
+   	<center>
+             <h1>PetAdopt</h1> <br>
+	     <h2 style="color:red;visibility=hidden;" id="error">Invalid Email!</h2> 
+	     <form action = "login.jsp" method="GET">
+                 <label for="email">Email:</label>
+		 <input type="text" id="email" name="email"><br> 
+		 <input type="button" onclick="register()" value="Register">
+		 <input type="submit" value="Login">
+	     </form>
+	</center>
+    </body>
+    <script>
+        start();
+    </script>
+</html>

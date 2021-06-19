@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<title>PetAdopt Registration</title>
+		<script>
+			
+			function setup()
+			{
+			exp = document.getElementById("exp");
+			pname = document.getElementById("pname");
+			pbday = document.getElementById("pbday");
+			isSterile = document.getElementById("isSterile");
+			noSterile = document.getElementById("noSterile");
+			dog = document.getElementById("dog");
+			cat = document.getElementById("cat");
+			rabbit = document.getElementById("rabbit");
+			ybite = document.getElementById("ybite");
+			nbite = document.getElementById("nbite");
+			walk = document.getElementById("walk");
+		
+			exp.disabled=false;
+			pname.disabled=true;
+			pbday.disabled=true;
+			isSterile.disabled=true;
+			noSterile.disabled=true;
+			dog.disabled=true;
+			cat.disabled=true;
+			rabbit.disabled=true;
+			ybite.disabled=true;
+			nbite.disabled=true;
+			walk.disabled=true;
+			
+			}
+
+			function aClick()
+			{
+				document.getElementById("exp").disabled = false;
+				document.getElementById("pname").disabled=true;
+				document.getElementById("pbday").disabled=true;
+				document.getElementById("isSterile").disabled=true;
+				document.getElementById("noSterile").disabled=true;
+				document.getElementById("dog").disabled=true;
+				document.getElementById("cat").disabled=true;
+				document.getElementById("rabbit").disabled=true;
+				document.getElementById("ybite").disabled=true;
+				document.getElementById("nbite").disabled=true;
+				document.getElementById("walk").disabled=true;
+			}
+
+			function sClick()
+			{
+				document.getElementById("exp").disabled = true;
+				document.getElementById("pname").disabled=false;
+				document.getElementById("pbday").disabled=false;
+				document.getElementById("isSterile").disabled=false;
+				document.getElementById("noSterile").disabled=false;
+				document.getElementById("dog").disabled=false;
+				document.getElementById("cat").disabled=false;
+				document.getElementById("rabbit").disabled=false;
+				document.getElementById("ybite").disabled=true;
+				document.getElementById("nbite").disabled=true;
+				document.getElementById("walk").disabled=true;
+
+			}
+
+			function bClick()
+			{
+				document.getElementById("exp").disabled = false;
+				document.getElementById("pname").disabled=false;
+				document.getElementById("pbday").disabled=false;
+				document.getElementById("isSterile").disabled=false;
+				document.getElementById("noSterile").disabled=false;
+				document.getElementById("dog").disabled=false;
+				document.getElementById("cat").disabled=false;
+				document.getElementById("rabbit").disabled=false;
+				document.getElementById("ybite").disabled=true;
+				document.getElementById("nbite").disabled=true;
+				document.getElementById("walk").disabled=true;
+
+			}
+
+			function dClick()
+			{
+				document.getElementById("ybite").disabled=true;
+				document.getElementById("nbite").disabled=true;
+				document.getElementById("walk").disabled=false;
+			}
+
+			function rClick()
+			{
+				document.getElementById("ybite").disabled=false;
+				document.getElementById("nbite").disabled=false;
+				document.getElementById("walk").disabled=true;
+
+			}
+
+			function cClick()
+			{
+				document.getElementById("ybite").disabled=true;
+				document.getElementById("nbite").disabled=true;
+				document.getElementById("walk").disabled=true;
+
+			}
+
+
+		</script>
+	</head>
+
+	<body onload="setup()">
+		<center>
+			<h1>Registration</h1>
+			<form action="/petadopt/register.jsp" method="get">
+				<label for="email">Email:</label>
+				<input type="text" id="email" name="email">
+				<br>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name">
+				<br>	
+				<label for="bday">Birthday:</label>
+				<input type="date" id="bday" name="bday">
+				<br>
+				<label for="intro">Self-Introduction:</label>
+				<input type="text" id="intro" name="intro">
+				<br>		
+				<label for="location">Location:</label>
+				<input type="text" id="location" name="location">
+				<br>	
+				<label for="role">Role:</label>
+				<br>	
+				<br>	
+				<label for="adopter">Adopter</label>	
+				<input type="radio" id="adopter" name="role" onclick="aClick()" value="a" checked>
+				<label for="sender">Sender</label>	
+				<input type="radio" id="sender" name="role" onclick="sClick()" value="s">
+				<label for="both">Both</label>	
+				<input type="radio" id="both" name="role" onclick="bClick()" value="b">
+				<br>	
+				<br>	
+				<label for="exp">Adopting Experience:</label>
+				<input type="text" id="exp" name="exp">
+				<br>
+				<br>	
+				<label for="pname">Pet Name:</label>
+				<input type="text" id="pname" name="pname">
+				<br>
+				<label for="pbday">Pet Birthday:</label>
+				<input type="date" name="pbday" id="pbday">
+				<br>
+				<label for="sterile">Sterilized:</label>
+				<br>
+				<label for="isSterile">Yes</label>
+				<input type="radio" id="isSterile" name="sterile" value="y">
+				<label for="noSterile">No</label>
+				<input type="radio" id="noSterile" name="sterile" value="n" checked>
+				<br>
+				<label for="breed">Breed:</label>
+				<br>
+				<label for="dog">Dog</label>
+				<input type="radio" id="dog" name="breed" onclick="dClick()" value="d">
+				<label for="cat">Cat</label>
+				<input type="radio" id="cat" name="breed" onclick="cClick()" value="c" checked>
+				<label for="rabbit">Rabbit</label>
+				<input type="radio" id="rabbit" name="breed" onclick="rClick()" value="r">
+				<br>
+				<label for="walk">Days for a walk:</label>
+				<input type="number" id="walk" name="walk" value="0">
+				<br>
+				<label for="bites">Bites wires:</label>
+				<br>
+				<label for="ybite">Yes</label>
+				<input type="radio" id="ybite" name="bites" value="y" checked>
+				<label for="nbite">No</label>
+				<input type="radio" id="nbite" name="bites" value="n">
+				<br>
+				<br>
+				<input type="submit" value="Register">	
+			</form>
+		</center>
+	</body>
+
+</html>
